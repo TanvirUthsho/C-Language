@@ -1,30 +1,31 @@
-#include<stdio.h>
- int main()
-  {
-       float variable; 
-printf("Enter a number:"); 
-scanf("%f",&variable);
- if(variable>=0)
-  {
-       printf("\tThe number is positive \n");
-        }
-         if(variable<0) 
-         {
-              printf("\tThe number is negative \n");
-               } if(variable-(int)variable==0&&variable>0)
-                { 
-                    printf("\tand\nThe number is natural\n");
-                 } 
-                 if(variable-(int)variable!=0&&variable<0)
-                  
-                {
-                      printf("\tand \n\tthe number is rational\n"); 
-                      }
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float num;
+    printf("Enter a number: ");
+    scanf("%f", &num);
 
-                       }
-                
-            //Output:
-            //Enter a number:6
-                 //The number is positive        
-                //and
-           //The number is natural
+    if (num > 0.0)
+       {
+        if((num - (int)num)==0)
+           printf("You entered a Natural number.");
+        else if ((num-sqrt(pow(num,2)))==0)
+           printf("You entered a Positive Rational number");
+        else
+           printf ("You entered an Irrational number");
+       }
+    else if (num < 0.0)
+            {
+             if((num-(int)num)==0)
+               printf("You entered a Negative Integer");
+             else if((num+sqrt(pow(num,2)))==0)
+               printf("you entered a Negative Rational number");
+             else
+               printf("You entered a Negative Irrational number");
+            }
+    else
+       printf("You entered zero");
+
+    return 0;
+}
