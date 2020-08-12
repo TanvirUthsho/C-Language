@@ -42,5 +42,5 @@ int main()
         printf("Second largest number is %d", b);
     }
 
-        return 0;
-    }
+    return 0;
+}
