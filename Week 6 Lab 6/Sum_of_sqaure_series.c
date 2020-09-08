@@ -1,32 +1,18 @@
-#include <stdio.h>
-int sumSeries(int N); //declaring function to find the summation of series
+#include<stdio.h>
+#include<math.h>
 
 int main()
 {
-    int a, Sum; //Declaring variables
-    printf("Enter a number:");
-    scanf("%d", &a); //taking variable input
+    int a,n,step=0,sign,result=0;
+    printf("Enter any Number:");
+    scanf("%d",&a);
 
-    Sum = sumSeries(a); //using the function
-
-    printf("The sum is:%d\n\n", Sum); //Printing the Sum
-
-    return 0;
-}
-
-//The int sumSeries(int N) function
-int sumSeries(int N)
-{
-    int i, sign, sum;
-
-    sum = N * N; //Declaring initial value of sum
-    sign = 1;    //Declaring initial value of sign
-
-    for (i = 1; i < N; i++)
-    {
-        sign = -1 * sign; //multiplying -1 with sign every time to substract and add
-        sum = sum + sign * (N - i) * (N - i);
+    for(n=0;a>n;n++){
+        sign=pow(-1,step);
+        result=result+sign*(pow(a-n,2));
+        step++;
     }
+    printf("Result is:%d\n",result);
+    return 0;
 
-    return sum;
-}
+    }

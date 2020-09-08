@@ -52,7 +52,6 @@ void circle()
     printf(" *    *\n\n");
     printf("   ** \n");
 }
-//the function to print triangle
 void triangle()
 {
     //Nested for loop for rows and columns
