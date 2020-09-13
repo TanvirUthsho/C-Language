@@ -8,7 +8,7 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    printf("\nArray in Reverse Order");
+    printf("\nArray in Reverse Order\n");
     for (i = 5 - 1; i >= 0; i--)
     {
         printf("%d\t", arr[i]);

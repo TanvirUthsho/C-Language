@@ -1,31 +1,45 @@
 #include <stdio.h>
 
-void search(int arr[], int size, int key)
-{
-    int i;
-
-    for (i = 0; i < size; i++)
-    {
-        if (arr[i] == key)
-            printf("element found\n");
-        else
-            printf("\nNot found");
-    }
-}
+//Including the void function
+void search(int arr[], int size, int key);
 
 int main()
 {
-    int arr[90], i, size, key;
+    int i, n, z; //Declaring variables
 
-    printf("Enter size of the  array : ");
-    scanf("%d", &size);
-    printf("Enter elements in array : ");
-    for (i = 0; i < size; i++)
+    printf("Enter array size:"); //getting array size
+    scanf("%d", &n);
+    int a[n];
+
+    printf("Array Elements:");
+
+    for (i = 0; i < n; i++) //putting the elements in array using for loop
     {
-        scanf("%d", &arr[i]);
+        scanf("%d", &a[i]);
     }
-    printf("Enter the key : ");
-    scanf("%d", &key);
 
-    search(arr, size, key);
+    printf("Search Key:"); //taking search key as input
+    scanf("%d", &z);
+
+    search(a, n, z); //using the void search function
+
+    return 0;
+}
+//making the void search function
+void search(int arr[], int size, int key)
+{
+    int j, flag = 0; //using flag value
+
+    for (j = 0; j < size; j++)
+    {
+        if (key == arr[j]) //if found flag value becomes 1
+            flag = 1;
+        if (key == arr[j]) //the loop stops if found
+            break;
+    }
+
+    if (flag == 1) //using flag valye to determine found or not
+        printf("Found");
+    else
+        printf("Not Found");
 }
