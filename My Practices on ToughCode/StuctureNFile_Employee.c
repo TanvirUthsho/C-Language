@@ -1,7 +1,8 @@
 /*Suppose, you are running a company where 50 employees work. 
 Design a structure name Employee to store their Name, Age, Basic salary, Bonus and any other thing that is needed. 
 Take all the data for all the employees from user. 
-Write a function name emp_bonus(). For those persons who are older than 50 years, will get a bonus which is 40% of their basic salary. The rest of the people will get 25% bonus of their salary. Print the name and the total salary of every employee. 
+Write a function name emp_bonus(). For those persons who are older than 50 years, will get a bonus which is 40% of their basic salary.The rest of the people will get 25% bonus of their salary.
+Print the name and the total salary of every employee. 
 Open a text file name Employee_Data. If the file opens successfully, write all the employees name and age on that file. 
 
 */
