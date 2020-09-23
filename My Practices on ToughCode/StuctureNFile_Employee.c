@@ -38,7 +38,7 @@ int main()
         emp[i].bonus = emp_bonus(emp[i].salary, emp[i].age);
     }
     FILE *fptr;
-    fptr = fopen("Employee_Data", "w");
+    fptr = fopen("Employee_Data.txt", "w");
     for (i = 0; i < 2; i++)
     {
         printf("\nEntered detail is\n:");
